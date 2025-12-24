@@ -1,0 +1,78 @@
+.events-carousel {
+  margin: 2.5rem 0;
+  padding: 2rem 1.5rem;
+  background-color: Beige;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.events-carousel h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #3cb371;
+}
+
+.carousel-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide {
+  max-width: 100%;
+  text-align: center;
+}
+
+.carousel-slide img {
+  max-width: 100%;
+  max-height: 280px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-caption {
+  margin-top: 0.75rem;
+  color: #333;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-btn.left {
+  left: 8px;
+}
+
+.carousel-btn.right {
+  right: 8px;
+}
+
+.carousel-dots {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.dot-active {
+  background-color: #3cb371;
+}

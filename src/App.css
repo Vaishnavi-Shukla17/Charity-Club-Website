@@ -1,42 +1,198 @@
-#root {
-  max-width: 1280px;
+/* Full-screen bisque background */
+body {
+
+  min-height: 100vh;
+  width:100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Monotype Corsiva", sans-serif;
+  background-color: Beige;
+  color: black;
+}
+
+/* App wrapper */
+.app-root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Main area */
+main {
+  flex: 1;
+  padding: 2rem 3rem;  /* top/bottom 2rem, left/right 3rem */
+}
+
+/* Centered content */
+.container {
+  width: 100%;
+  min-height:100vh;/* optional */
+
+}
+
+/* Navbar and footer in opal green */
+nav,
+footer {
+  padding: 1rem 2rem;
+  background-color: #3cb371;      /* opal green */
+  color: white;  
+  width: 100%;                 /* text on green */
+}
+
+nav {
+  border-bottom: 1px solid #2b8b55;
+  width:100%;
+}
+
+footer {
+  border-top: 1px solid #2b8b55;
+  width:100%;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Links in navbar */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections on bisque with black text */
+section {
+  width:100%;
+  margin: 2.5rem 0;
+  padding: 2rem 1.5rem;
+  background-color: Beige;
+  color: black;
+}
+
+/* Headings in opal green */
+section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #3cb371;
+}
+
+/* Forms and inputs */
+form {
+  margin-top: 1rem;
+}
+
+form div {
+  margin-bottom: 0.75rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  color: black;
+}
+
+/* Buttons in opal green with white text */
+button {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #3cb371;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2b8b55;
+}
+.page-wrap {
+  width: 100%;
+  max-width: 900px;   /* smaller number so centering is obvious */
+  margin-left: auto;  /* center horizontally */
+  margin-right: auto;
+}
+.content-wrap {
+  width: 100%;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+}
+.what-we-do-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns */
+  gap: 1.5rem;                                      /* space between cards */
+  margin-top: 1.5rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.work-card {
+  background-color: Beige;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.work-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #3cb371;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 700px) {
+  .what-we-do-grid {
+    grid-template-columns: 1fr;
   }
 }
-
-.card {
-  padding: 2em;
+button {
+  margin-top: 0.75rem;
+  padding: 0.8rem 1.8rem;   /* bigger height + width */
+  border-radius: 6px;
+  border: none;
+  background-color: #3cb371;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;          /* larger text */
+  cursor: pointer;
 }
 
-.read-the-docs {
-  color: #888;
+button:hover {
+  background-color: #2b8b55;
 }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-item {
+  background-color: Beige;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item figcaption {
+  padding: 0.5rem 0.75rem 0.75rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+
+
